@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laboratorio 3 - Primer Parcial 1C 2021</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <header>
+    <div id="logo">Logo</div>
+    <ul class="nav">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Nosotros</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Contacto</a></li>
+    </ul>
+    <main>
+      <div class="container">
+
+        <h1>Administracion</h1>
+    
+        <form>
+          <input type="hidden" name="id">
+          <input type="text" name = "nombre" placeholder="ingrese nombre" required><br>
+          <input type="text" name= "email" placeholder="ingrese mail"><br>
+          <fieldset>
+            <legend>Genero </legend>
+              <input type="radio" name="sexo" value="masculino" id="">Masculino<br>
+              <input type="radio" name="sexo" value="femenino" id="" checked>Femenino<br>
+          </fieldset>
+          <input id ="btnSubmit" type="submit" value="AltaPersona" >
+          <input class="oculto" id ="btnDelete" type="submit" value="Eliminar" >
+        </form>
+        <div id="spinner-container"></div>
+    <br>
+    <br>
+    <button id="btnLista">Crear lista</button>
+        <div id="divLista"></div>
+    
+      </div>
+    </main>
+      <footer>
+        <ul>
+          <li>about</li>
+          <li>text</li>
+          <li>text</li>
+        </ul>
+      </footer>
+</body>
+</html>

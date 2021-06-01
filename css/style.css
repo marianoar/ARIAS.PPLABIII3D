@@ -1,0 +1,33 @@
+.container{
+  margin: 0 auto;
+  max-width: 400px;
+  display: flex;
+  background-color: burlywood;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+}
+
+#btnLista{
+  width: 100px;
+
+}
+
+table{
+  background-color: aqua;
+}
+td{
+
+  border: 1px solid crimson;
+}
+
+form{
+  margin-bottom: 5px;
+}
+
+.oculto{
+  display: none;
+}
+.visible{
+  display:block
+}
