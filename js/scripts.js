@@ -10,9 +10,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
   document.forms[0].addEventListener("submit", HandlerSubmit);
 
-  // boton = document.getElementById("btnLista");
-
-  // boton.addEventListener("click", HandlerLoadList);
 
   document.addEventListener("click", HandlerClick);
 
@@ -22,19 +19,18 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 function HandlerSubmit(e){
-  e.preventDefault(); // mato el envio del submit
+  e.preventDefault(); 
   //console.log(e.target);
 
   const frm = e.target;
 
   // if(frm.id.value){
-  //   const changePersona = new Persona(
-  //     parseInt(frm.id.value), frm.nombre.value, frm.email.value, frm.sexo.value);
+  //   const modificoAnuncio = new Anuncio( );
 
   //     agregarSpinner();
 
   //     setTimeout(()=>{
-  //       modificarPersona(changePersona);
+  //       modificarAnuncio(modificoAnuncio);
   //       eliminarSpinner();
   //     },2500
   //     );
@@ -55,24 +51,26 @@ function HandlerSubmit(e){
 
 }
 
-function HandlerClick(e){
-  
-  //  e.target.matches(/*aca va un selector de CSS*/"btnLista"); //devuelve bool
- if(e.target.matches("td")){
-   //console.log(e.target.parentNode.firstElementChild.textContent);
-   let id = e.target.parentNode.dataset.id;
-   CargarForm(id);
- }else if(e.target.matches("#btnDelete")){
-   let id = parseInt(parseInt(document.forms[0].id.value));
-   console.log(id);
-   if(confirm("¿Desea borrar este anuncio?")){
-  //   personas = personas.filter(elem=>elem.id!==id); // filtro por la negativa, pero como esta delcarada como const no la puedo modificar
-   anuncios.splice(anuncios.findIndex((elemento)=>elemento.id ==id),1);
+function HandlerClick(e) {
 
-   almacenarDataLocalStorage(anuncios);
-   HandlerLoadList();
-   }
-   limpiarForm(document.forms[0]);
+
+  if (e.target.matches("td")) {
+
+    let id = e.target.parentNode.dataset.id;
+    CargarForm(id);
+  } else if (e.target.matches("#btnDelete")) {
+    let id = parseInt(parseInt(document.forms[0].id.value));
+
+   // console.log(id);
+
+    if (confirm("¿Desea borrar este anuncio?")) {
+
+      anuncios.splice(anuncios.findIndex((elemento) => elemento.id == id), 1);
+
+      almacenarDataLocalStorage(anuncios);
+      HandlerLoadList();
+    }
+    limpiarForm(document.forms[0]);
   }
 }
 
@@ -129,7 +127,7 @@ function eliminarSpinner(){
 }
 
 function HandlerLoadList(e){
-  // renderizarLista(CrearLista(marcas), elementoContenedor);
+ 
    renderizarLista(CrearTabla(anuncios), elementoContenedor);
   // const emisor = e.target;
   // emisor.textContent = "eliminar lista";
