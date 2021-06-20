@@ -21,6 +21,9 @@ a{
   border-radius: 10px;
 }
 
+#spinner-container{
+  background-color: white;
+}
 #btnSubmit{
   width: 100px;
   color:gainsboro;
@@ -97,4 +100,8 @@ img{
 
 h1{
   padding: 15px;
+}
+
+footer{
+  margin-top: 10px;
 }
