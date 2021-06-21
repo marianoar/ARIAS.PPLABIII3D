@@ -5,6 +5,35 @@
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+body{
+  margin: 0 auto;
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+}
+
+header{
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  height: 150px;
+  color: antiquewhite;
+  background-color: rgb(7, 7, 71);
+}
+
+header p {
+  font-style: italic;
+  
+}
+
+#logo{
+  width: 30%;
+  background-image: url("../img/logoCar.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 a{
   text-decoration: none;
   color: white;
@@ -12,58 +41,84 @@ a{
 
 .container{
   margin: 0 auto;
-  max-width: 550px;
   display: flex;
   background-color: gainsboro;
-  height: 100 vh;
   flex-direction: column;
   align-items: center;
-  border-radius: 10px;
 }
 
 #spinner-container{
   background-color: white;
 }
 #btnSubmit{
-  width: 85px;
-  height: 50px;
-  color:gainsboro;
   background-color: green;
-  background-image: url("../img/iGuadar2.png");
-  background-repeat: no-repeat;
-  background-size:q;
-  text-align: right;
-  font-weight: bold;
+  
 }
 #btnDelete{
-  width: 100px;
-  color:gainsboro;
   background-color: red;
-  border-radius: 2px;
 }
 
-form{
-  justify-content: center;
-  align-items: center;
-  width: 95%;
-  margin-top: 20px;
+#frm{
+margin: 10px;
+padding: 10px;
+background-color: blueviolet;
+width: 90%;
+align-items: center;
+display: inline;
+flex-direction: row;
+border-radius: 25px;
+}
+#frm>:first-child{
   padding: 15px;
+  margin-top: 5px;
 }
 
+#txtInput{
+  width:100%;
+}
+
+#checkbox{
+  display: block;
+  width: 40%;
+
+}
+
+#container-buttons input{
+  margin: 0 auto;
+  height: 35px;
+  width: 125px;
+  border-radius: 10px;
+  padding: 0 15px;
+  border: 0;
+  color:gainsboro;
+  text-align: right;
+
+}
+#container-buttons input:hover{
+  border: 1px solid gray;
+  box-shadow: 0 1px 1px black;
+  font-weight: bold;
+  cursor: pointer;
+}
 #radioInput{
   display: inline;
 }
+
 #items{
-  display: inline;
+  margin-top: 5px;
 }
 #items input{
   width: 100px;
 }
-
+#divLista{
+  width: 90%;
+}
 table{
   background-color: whitesmoke;
-  border: 2px solid black;
+  border: 1px solid black;
   border-radius: 5px;
+  margin: 10px auto;
+  width: 100%;
 }
 
 thead{
@@ -83,16 +138,18 @@ td{
 }
 
 .nav{
-  background-color: rgb(7, 7, 71);
+
   padding: 20px;
   list-style: none;
   text-align: center;
+  width: 70%;
+  margin: auto;
 }
 
 .nav li{
   display: inline-block;
-  font-size: 20px;
-  margin: 10px 0px;
+  font-size: 18px;
+  margin: 5px 0px;
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -105,21 +162,26 @@ img{
   width: 100%;
 }
 
-#logo{
-  width: 150 px;
-  height: 150 px;
-  background-color: beige;
-  width: auto;
-  background-image: url("../img/logoCar.jpg");
-}
-
-h1{
+h2{
   padding: 15px;
 }
 
 footer{
-  margin-top: 10px;
+  background-color: rgb(7, 7, 71);
+  padding: 20px;
+  list-style: none;
+  text-align: center;
+  width: 100%
 }
+
+footer li{
+  display: inline-block;
+  font-size: 18px;
+  margin: 5px 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 .btnStyles{
   width: 15px;
   height: 15px;
