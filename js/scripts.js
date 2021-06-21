@@ -74,9 +74,13 @@ function HandlerClick(e) {
       HandlerLoadList();
     }
     limpiarForm(document.forms[0]);
-    document.getElementById("btnSubmit").value = "Modificar";
+    
+  document.getElementById("btnSubmit").value = "Guardar";
+  document.getElementById("btnDelete").classList.add("oculto");
 
-    document.getElementById("btnDelete").classList.remove("oculto");
+    //document.getElementById("btnSubmit").value = "Modificar";
+
+//    document.getElementById("btnDelete").classList.remove("oculto");
   }
 }
 

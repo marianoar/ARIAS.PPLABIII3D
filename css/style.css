@@ -25,10 +25,15 @@ a{
   background-color: white;
 }
 #btnSubmit{
-  width: 100px;
+  width: 85px;
+  height: 50px;
   color:gainsboro;
   background-color: green;
-  border-radius: 2px;
+  background-image: url("../img/iGuadar2.png");
+  background-repeat: no-repeat;
+  background-size:q;
+  text-align: right;
+  font-weight: bold;
 }
 #btnDelete{
   width: 100px;
@@ -43,6 +48,16 @@ form{
   width: 95%;
   margin-top: 20px;
   padding: 15px;
+}
+
+#radioInput{
+  display: inline;
+}
+#items{
+  display: inline;
+}
+#items input{
+  width: 100px;
 }
 
 table{
@@ -104,4 +119,9 @@ h1{
 
 footer{
   margin-top: 10px;
+}
+.btnStyles{
+  width: 15px;
+  height: 15px;
+  padding-right: 5px;
 }
