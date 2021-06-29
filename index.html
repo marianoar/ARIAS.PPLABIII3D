@@ -69,7 +69,7 @@
       <div id=filtos>
         <form id="frmFiltros">
           Filtrar por transaccion:<br>
-          <label>Transaccion</label><select id="ciudad" name="ciudad">
+          <!-- <label>Transaccion</label><select id="ciudad" name="ciudad">
 
             <option value="">Elija opción</option>
 
@@ -79,10 +79,10 @@
 
             <option value="Santiago">Santiago (CL)</option>
 
-        </select><br/>
-          <select id="selectTransaccion" name="select" onchange="">
-
-            <option value="Todos" selected>Todos</option>
+        </select><br/> -->
+          <select id="selectTransaccion" name="select">
+            <!-- <option value="">Elija filtro</option> -->
+            <option value="Todos">Todos</option>
             <option value="alquiler">Alquiler</option>
             <option value="venta">Venta</option>
           </select>
@@ -90,13 +90,12 @@
          <input type="text" id="promedio">
 
           <div id="boxes">
-            <label>
-              <input type="checkbox" id="cbox1" value="first_checkbox"> primer checkbox
-            </label>
-            <input type="checkbox" id="cbox2" value="second_checkbox">
-            <label for="cbox2">segundo checkbox</label>
-            <input type="checkbox" id="cbox3" value="tercer_checkbox">
-            <label for="cbox2">tercer checkbox</label>
+            <br>
+            <label>Preferencias</label>
+            <input name="Titulo" type="checkbox" id="box"/>Titulo
+  
+            <input name="Descripcion" type="checkbox" id="box"/>Descripcion
+
 
           </div>
         </form>

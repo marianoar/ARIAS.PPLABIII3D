@@ -3,11 +3,12 @@ import { Anuncio_Auto } from "./anuncio_auto.js";
 const elementoContenedor = document.getElementById("divLista");
 //const select=document.getElementsByTagName('select')[0];
 
-//const select=document.getElementById('selectTransaccion');
+const select=document.getElementById('selectTransaccion');
+
 const delay = 1000;
 let anuncios = [];
 let boton = null;
-
+let checkboxElements = new Array();
 //const anuncios = JSON.parse(localStorage.getItem("anuncios")) || [];
 //PROBLEMAS: no pude hacer que el select funcione con otro evento, 
 window.addEventListener("DOMContentLoaded", () => {
@@ -16,30 +17,29 @@ window.addEventListener("DOMContentLoaded", () => {
 
   document.forms[0].addEventListener("submit", HandlerSubmit);
 
-  //select.addEventListener("click",HandlerChange);
+  select.addEventListener("click",HandlerChange);
   //console.log(data);
   document.addEventListener("click", HandlerClick);
 
+  var elementosInput = document.getElementsByTagName('input'); 
 
+  for (var i = 0; i < elementosInput.length; i++) {
 
-  
- // document.addEventListener("onChange", HandlerChange);
-  // if (anuncios.length > 0) {
-  //   HandlerLoadList( anuncios);
-  // }
+    if (elementosInput[i].type == 'checkbox') {
+      checkboxElements.push(elementosInput[i]);
+    }
 
+  }
 });
 
 function HandlerChange(e) {
-  e.preventDefault();
+  //e.preventDefault();
   // alert("algo");
   //let elemento=document.getElementsByTagName('select')[0];
   //elemento.addEventListener("onchange",HandlerChange )
 
-  console.log(select.id);
-
   let seleccion = select.value;
-  if (seleccion != "Todos") {
+  if (seleccion !== "Todos") {
     const filter = anuncios.filter(e => e.transaccion === seleccion);
     console.log(filter);
    // CalculoPromedio(filter);
@@ -54,7 +54,7 @@ function HandlerChange(e) {
     //aux.innerHTML="ALGO";//CalculoPromedio(filter);
     
   }
-  else {
+  else{
     getAnuncios();
     let aux = document.getElementById("promedio").value=CalculoPromedio(anuncios);
   }
@@ -104,8 +104,45 @@ function HandlerSubmit(e) {
   limpiarForm(frm);
 }
 
+function filtrarColumnas(checkBoxSel){
+  
+
+  for (let i=0; i<checkBoxSel.length;i++)
+  {
+    console.log(checkBoxSel.length)
+      //alert("boxselect"+checkBoxSel[i]);
+      if(checkBoxSel[i] === "Titulo"){
+      const filter = anuncios.map(e => e.titulo, e.puertas);
+      console.log(filter);
+    
+      //HandlerLoadList(filter);
+      }
+    
+  }
+
+}
+
 function HandlerClick(e) {
 
+  if(e.target.matches("select")){
+    //alert(e.target.value);
+  }
+  if(e.target.matches("#box"))
+  {
+    let checkBoxSel = new Array();
+  //  alert(e.target.name);
+    for (let i=0; i<checkboxElements.length;i++)
+    {
+  
+      if (checkboxElements[i].checked ==true)
+      {
+        checkBoxSel.push(checkboxElements[i].name);
+       // alert(checkboxElements[i].name);
+       //  alert("boxselect"+checkBoxSel.textContent);
+      }
+    }
+    filtrarColumnas(checkBoxSel);
+  }
   //console.log(data);
   if (e.target.matches("td")) {
 
