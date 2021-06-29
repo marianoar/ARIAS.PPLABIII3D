@@ -73,21 +73,16 @@ function HandlerClick(e) {
       almacenarDataLocalStorage(anuncios);
       agregarSpinner();
 
-      setTimeout(()=>{
+      setTimeout(() => {
         HandlerLoadList();
         eliminarSpinner();
       }, delay);
-
-
     }
+
     limpiarForm(document.forms[0]);
 
     document.getElementById("btnSubmit").value = "Guardar";
     document.getElementById("btnDelete").classList.add("oculto");
-
-    //document.getElementById("btnSubmit").value = "Modificar";
-
-    //    document.getElementById("btnDelete").classList.remove("oculto");
   }
 }
 
