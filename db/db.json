@@ -1,0 +1,94 @@
+{
+  "anuncios": [
+    {
+      "id": 1624214375055,
+      "titulo": "camioneta",
+      "transaccion": "alquiler",
+      "descripcion": "caja grande",
+      "precio": "7657",
+      "puertas": "2",
+      "km": "7676",
+      "potencia": "7676"
+    },
+    {
+      "id": 1624214494848,
+      "titulo": "azul y verde",
+      "transaccion": "alquiler",
+      "descripcion": "cachivache verde",
+      "precio": "222",
+      "puertas": "2",
+      "km": "313",
+      "potencia": "2321"
+    },
+    {
+      "id": 1624214751974,
+      "titulo": "Car's sell",
+      "transaccion": "venta",
+      "descripcion": "a la playa",
+      "precio": "5500",
+      "puertas": "5",
+      "km": "666",
+      "potencia": "899"
+    },
+    {
+      "id": 1624214793607,
+      "titulo": "Oferta",
+      "transaccion": "alquiler",
+      "descripcion": "ideal",
+      "precio": "500",
+      "puertas": "5",
+      "km": "2",
+      "potencia": "1666"
+    },
+    {
+      "id": 1624214957790,
+      "titulo": "Oportunidad",
+      "transaccion": "venta",
+      "descripcion": "fast food",
+      "precio": "4445",
+      "puertas": "4",
+      "km": "444",
+      "potencia": "44"
+    },
+    {
+      "id": 1624936172920,
+      "titulo": "Autos locos",
+      "transaccion": "alquiler",
+      "descripcion": "de carrera",
+      "precio": "1234",
+      "puertas": "2",
+      "km": "1",
+      "potencia": "1"
+    },
+    {
+      "id": 1624936202000,
+      "titulo": "Test",
+      "transaccion": "venta",
+      "descripcion": "test",
+      "precio": "1000",
+      "puertas": "2",
+      "km": "1",
+      "potencia": "1"
+    },
+    {
+      "id": 1624938609246,
+      "titulo": "Prueba SP",
+      "transaccion": "alquiler",
+      "descripcion": "arriba",
+      "precio": "123",
+      "puertas": "2",
+      "km": "123",
+      "potencia": "123"
+    },
+    {
+      "id": 1624948509119,
+      "titulo": "colectivo",
+      "transaccion": "venta",
+      "descripcion": "con ventanas",
+      "precio": "2323",
+      "puertas": "5",
+      "km": "323",
+      "potencia": "232"
+    }
+  ]
+}
