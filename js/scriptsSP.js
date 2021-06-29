@@ -1,7 +1,7 @@
 import { Anuncio_Auto } from "./anuncio_auto.js";
 
 const elementoContenedor = document.getElementById("divLista");
-const select=document.getElementsByTagName('select')[0];
+//const select=document.getElementsByTagName('select')[0];
 
 //const select=document.getElementById('selectTransaccion');
 const delay = 1000;
@@ -16,7 +16,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
   document.forms[0].addEventListener("submit", HandlerSubmit);
 
-  select.addEventListener("click",HandlerChange);
+  //select.addEventListener("click",HandlerChange);
   //console.log(data);
   document.addEventListener("click", HandlerClick);
 
