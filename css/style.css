@@ -50,12 +50,65 @@ a{
 #spinner-container{
   background-color: white;
 }
+
 #btnSubmit{
-  background-color: green;
-  
+color: green;
 }
+
+.btn-submit {
+  background-image: linear-gradient(to right, #03744c 0%, #67c58a  51%, #1D976C  100%)
+}
+
+.btn-submit {
+   margin: 25px;
+   padding: 15px 45px;
+   text-align: center;
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: white;            
+   box-shadow: 0 0 10px #eee;
+   border-radius: 10px;
+ }
+
+ .btn-submit:hover {
+   background-position: right center;
+   color: #fff;
+   text-decoration: none;
+ }
+ 
+ /* .btn-delete {background-image: linear-gradient(to right, #000000 0%, #e74c3c  51%, #000000  100%)}
+ .btn-delete {
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+  } */
+ 
 #btnDelete{
   background-color: red;
+  background-image: linear-gradient(to right, #000000 0%, #e74c3c  51%, #000000  100%);
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;            
+  box-shadow: 0 0 10px #eee;
+  border-radius: 10px;
+  /* display: block; */
+}
+#btnDelete:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
 }
 
 #frm{
@@ -83,6 +136,12 @@ border-radius: 25px;
 
 }
 
+#container-buttons{
+  padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
 #container-buttons input{
   margin: 0 auto;
   height: 35px;
@@ -91,15 +150,15 @@ border-radius: 25px;
   padding: 0 15px;
   border: 0;
   color:gainsboro;
-  text-align: right;
-
 }
+
 #container-buttons input:hover{
   border: 1px solid gray;
   box-shadow: 0 1px 1px black;
   font-weight: bold;
   cursor: pointer;
 }
+
 #radioInput{
   display: inline;
 }
@@ -133,6 +192,7 @@ td{
 .oculto{
   display: none;
 }
+
 .visible{
   display:block
 }
@@ -187,3 +247,4 @@ footer li{
   height: 15px;
   padding-right: 5px;
 }
+

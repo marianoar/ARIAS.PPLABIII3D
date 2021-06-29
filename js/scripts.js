@@ -71,16 +71,23 @@ function HandlerClick(e) {
       anuncios.splice(anuncios.findIndex((elemento) => elemento.id == id), 1);
 
       almacenarDataLocalStorage(anuncios);
-      HandlerLoadList();
+      agregarSpinner();
+
+      setTimeout(()=>{
+        HandlerLoadList();
+        eliminarSpinner();
+      }, delay);
+
+
     }
     limpiarForm(document.forms[0]);
-    
-  document.getElementById("btnSubmit").value = "Guardar";
-  document.getElementById("btnDelete").classList.add("oculto");
+
+    document.getElementById("btnSubmit").value = "Guardar";
+    document.getElementById("btnDelete").classList.add("oculto");
 
     //document.getElementById("btnSubmit").value = "Modificar";
 
-//    document.getElementById("btnDelete").classList.remove("oculto");
+    //    document.getElementById("btnDelete").classList.remove("oculto");
   }
 }
 
